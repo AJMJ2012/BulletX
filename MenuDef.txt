@@ -1,0 +1,18 @@
+AddOptionMenu "OptionsMenu" {
+	Submenu "BulletX", "BulletX"
+}
+
+OptionMenu "BulletX" {
+	Title "BulletX"
+
+	StaticText "Settings", 1
+	Slider "Speed", "bx_speed", 32, 2048, 1, 0
+	Slider "Damage", "bx_damage", 1, 10, 1, 0
+	Option "Random Damage", "bx_randomdamage", YesNo
+	StaticText ""
+
+	StaticText "Visual", 1
+	Option "Tracer Rounds", "bx_tracerrounds", YesNo
+	Option "Vapor Trails", "bx_vaportrails", YesNo
+	StaticText ""
+}

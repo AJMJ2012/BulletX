@@ -1,0 +1,5 @@
+server int bx_speed = 256;
+server int bx_damage = 5;
+server bool bx_randomdamage = true;
+server bool bx_tracerrounds = true;
+server bool bx_vaportrails = true;

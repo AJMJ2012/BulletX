@@ -1,0 +1,84 @@
+FlickerLight BulletX
+{
+    Color 1.0 0.75 0.5
+    Size 32
+    SecondarySize 36
+    Chance 0.5
+	Attenuate 1
+}
+
+Object BulletX_Glow
+{
+    Frame BGLO { light BulletX }
+}
+
+FlickerLight ImpactX1
+{
+    Color 1.0 0.75 0.5
+    Size 12
+    SecondarySize 14
+    Chance 0.5
+	Attenuate 1
+}
+
+FlickerLight ImpactX2
+{
+    Color 0.75 0.5 0.25
+    Size 16
+    SecondarySize 18
+    Chance 0.5
+	Attenuate 1
+}
+
+FlickerLight ImpactX3
+{
+    Color 0.5 0.25 0.0
+    Size 12
+    SecondarySize 14
+    Chance 0.5
+	Attenuate 1
+}
+
+FlickerLight ImpactX4
+{
+    Color 0.25 0.125 0.0
+    Size 8
+    SecondarySize 10
+    Chance 0.5
+	Attenuate 1
+}
+
+FlickerLight ImpactX5
+{
+    Color 0.1875 0.09375 0.0
+    Size 4
+    SecondarySize 6
+    Chance 0.5
+	Attenuate 1
+}
+
+FlickerLight ImpactX6
+{
+    Color 0.125 0.0675 0.0
+    Size 4
+    SecondarySize 6
+    Chance 0.5
+	Attenuate 1
+}
+
+Object ImpactX
+{
+    Frame GUNSA { light ImpactX1 }
+    Frame GUNSB { light ImpactX2 }
+    Frame GUNSC { light ImpactX3 }
+    Frame GUNSD { light ImpactX4 }
+    Frame GUNSE { light ImpactX5 }
+    Frame GUNSF { light ImpactX6 }
+}
+
+Brightmap Sprite GUNSA0 { Map "Brightmaps/GUNSA0.png" DisableFullBright }
+Brightmap Sprite GUNSB0 { Map "Brightmaps/GUNSB0.png" DisableFullBright }
+Brightmap Sprite GUNSC0 { Map "Brightmaps/GUNSC0.png" DisableFullBright }
+Brightmap Sprite GUNSD0 { Map "Brightmaps/GUNSD0.png" DisableFullBright }
+Brightmap Sprite GUNSE0 { Map "Brightmaps/GUNSE0.png" DisableFullBright }
+Brightmap Sprite GUNSF0 { Map "Brightmaps/GUNSF0.png" DisableFullBright }

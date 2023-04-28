@@ -1,0 +1,39 @@
+Model BulletX_Bullet
+{
+	Path "Models/Bullet"
+	Model 0 "bullet.obj"
+	Skin 0 "bullet.png"
+
+	USEACTORPITCH
+
+	Scale 1.0 1.0 1.0
+
+    FrameIndex PUFF A 0 0
+}
+
+Model BulletX_Trail
+{
+	Path "Models/Bullet"
+	Model 0 "bullet_trail.obj"
+	Skin 0 "bullet_trail.png"
+
+	USEACTORPITCH
+
+	Scale 1.0 1.0 1.0
+
+    FrameIndex PUFF A 0 0
+}
+
+Model BulletX_Trail2
+{
+	Path "Models/Bullet"
+
+	Model 0 "bullet_trail2.obj"
+	Skin 0 "bullet_trail2.png"
+
+	USEACTORPITCH
+
+	Scale 1.0 1.0 1.0
+
+    FrameIndex PUFF C 0 0
+}

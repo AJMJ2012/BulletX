@@ -1,0 +1,5 @@
+Sprite "BGLOA0", 256, 256
+{
+	Offset 128, 128
+	Patch "models/bullet/bullet_glow.png", 0, 0
+}
