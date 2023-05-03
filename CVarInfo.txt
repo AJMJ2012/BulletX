@@ -1,5 +1,5 @@
 server int bx_speed = 256;
-server int bx_damage = 5;
-server bool bx_randomdamage = true;
+server int bx_fallbackplayerdamage = 5; // Vanilla guns deal 5*1d3 damage
+server int bx_fallbackenemydamage = 3; // Vanilla enemies deal 3*1d5 damage
 server bool bx_tracerrounds = true;
 server bool bx_vaportrails = true;
