@@ -6,7 +6,7 @@ Model BulletX_Bullet
 
 	USEACTORPITCH
 
-	Scale 1.0 1.0 1.0
+	Scale 4.0 4.0 4.0
 
     FrameIndex PUFF A 0 0
 }
@@ -21,7 +21,7 @@ Model BulletX_Trail
 
 	Scale 1.0 1.0 1.0
 
-    FrameIndex PUFF A 0 0
+    FrameIndex NULL A 0 0
 }
 
 Model BulletX_Trail2
@@ -35,5 +35,5 @@ Model BulletX_Trail2
 
 	Scale 1.0 1.0 1.0
 
-    FrameIndex PUFF C 0 0
+    FrameIndex NULL A 0 0
 }

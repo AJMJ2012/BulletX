@@ -109,10 +109,15 @@ class BulletX_Bullet : BulletX_Base {
 	Default {
 		Damage (1); // Needed for DoSpecialDamage
 		Friction (59392.0 / 65535.0); // Default Friction
+		Scale 0.25;
 	}
 
 	override int DoSpecialDamage(Actor target, int damage, Name damagetype) {
 		return bulletDamage > 0 ? bulletDamage : 4 * Random[GunShot](1, 4);
+	}
+
+	bool OnFloor() {
+		return pos.Z <= floorZ || bOnMObj;
 	}
 
 	override void PostBeginPlay() {
@@ -148,7 +153,9 @@ class BulletX_Bullet : BulletX_Base {
 			Vel.x *= 1.0 - (1.0 / bulletSpeed);
 			Vel.y *= 1.0 - (1.0 / bulletSpeed);
 			Vel.z *= 1.0 - (1.0 / bulletSpeed);
-			Vel.z -= gravity;
+			if (!OnFloor()) {
+				Vel.z -= gravity;
+			}
 			pitch = PitchFromVel();
 			for (int i = 0; i < children.Size(); i++) {
 				if (children[i] != null) {
@@ -225,11 +232,11 @@ class BulletX_Trail : BulletX_Base {
 
 	States {
 		Spawn:
-			PUFF A 1 Bright;
+			NULL A 1 Bright;
 			Loop;
 		Death:
-			PUFF A 1 Bright;
-			PUFF A 1 Bright { Scale -= (0.25, 0.25); if (min(Scale.X, Scale.Y) < 0.0) { Destroy(); } }
+			NULL A 1 Bright;
+			NULL A 1 Bright { Scale -= (0.25, 0.25); if (min(Scale.X, Scale.Y) < 0.0) { Destroy(); } }
 			Wait;
 	}
 }
@@ -243,11 +250,11 @@ class BulletX_Trail2 : BulletX_Base {
 	
 	States {
 		Spawn:
-			PUFF C 1 NoDelay { if (min(Scale.X, Scale.Y) < 1.0) { Scale += (0.25, 0.25); } }
+			NULL A 1 NoDelay { if (min(Scale.X, Scale.Y) < 1.0) { Scale += (0.25, 0.25); } }
 			Loop;
 		Death:
-			PUFF C 1 Bright;
-			PUFF C 1 { Scale -= (0.25, 0.25); if (min(Scale.X, Scale.Y) < 0.0) { Destroy(); } }
+			NULL A 1 Bright;
+			NULL A 1 { Scale -= (0.25, 0.25); if (min(Scale.X, Scale.Y) < 0.0) { Destroy(); } }
 			Wait;
 	}
 }
